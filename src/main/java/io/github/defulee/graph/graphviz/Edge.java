@@ -98,7 +98,7 @@ public class Edge {
             builder.append(arrowTail.render("arrowtail")).append(", ");
         }
         if (color != null) {
-            builder.append(color.render()).append(", ");
+            builder.append(color.render(false)).append(", ");
         }
         if (CollectionUtils.isNotEmpty(styles)) {
             builder.append("style=\"").append(Joiner.on(",").skipNulls().join(styles)).append("\", ");

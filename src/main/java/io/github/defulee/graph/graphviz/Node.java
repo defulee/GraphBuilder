@@ -24,6 +24,7 @@ public class Node {
     private List<Style> styles;
     private Shape shape;
     private Color color;
+    private Color fillColor;
 
     public Node() {
         this("node");
@@ -91,7 +92,10 @@ public class Node {
             builder.append(shape.render()).append(", ");
         }
         if (color != null) {
-            builder.append(color.render()).append(", ");
+            builder.append(color.render(false)).append(", ");
+        }
+        if (fillColor != null) {
+            builder.append(fillColor.render(true)).append(", ");
         }
         if (CollectionUtils.isNotEmpty(styles)) {
             builder.append("style=\"").append(Joiner.on(",").skipNulls().join(styles)).append("\", ");

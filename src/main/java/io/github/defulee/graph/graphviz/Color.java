@@ -156,7 +156,7 @@ public enum Color {
     YELLOW,
     YELLOWGREEN;
 
-    public String render() {
-        return String.format("color=\"%s\"", this.name().toLowerCase().replaceAll("_", ""));
+    public String render(boolean fillColor) {
+        return String.format("%s=\"%s\"", fillColor ? "fillcolor" : "color", this.name().toLowerCase().replaceAll("_", ""));
     }
 }
