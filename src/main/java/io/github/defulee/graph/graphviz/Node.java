@@ -35,7 +35,7 @@ public class Node {
     }
 
     public Node(String name, String label) {
-        this(name, label, Collections.emptyList(), null, null);
+        this(name, label, Collections.emptyList(), null, null, null);
     }
 
     public Node(String name, String label, Shape shape) {
@@ -54,7 +54,7 @@ public class Node {
         this(name, label, shape, color, null);
     }
 
-    public Node(String name, String label, List<Style> styles, Shape shape, Color color) {
+    public Node(String name, String label, List<Style> styles, Shape shape, Color color, Color fillColor) {
         this.name = name;
         this.label = label;
         if (CollectionUtils.isNotEmpty(styles)) {
@@ -64,6 +64,7 @@ public class Node {
         }
         this.shape = shape;
         this.color = color;
+        this.fillColor = fillColor;
     }
 
     public Node(String name, String label, Shape shape, Color color, Style... styles) {

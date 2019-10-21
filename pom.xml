@@ -28,4 +28,16 @@
 
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>terminus</id>
+            <name>terminus release repository</name>
+            <url>https://repo.terminus.io/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>terminus</id>
+            <name>terminus snapshot repository</name>
+            <url>https://repo.terminus.io/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
