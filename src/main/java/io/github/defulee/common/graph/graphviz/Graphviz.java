@@ -1,9 +1,17 @@
-package io.github.defulee.graph.graphviz;
+package io.github.defulee.common.graph.graphviz;
 
 import org.apache.commons.collections4.CollectionUtils;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 /**
  * @author defu
@@ -83,6 +91,21 @@ public class Graphviz {
             }
         }
         return builder.append("}").toString();
+    }
+
+    public File render(String outputFilePath) throws IOException {
+        String content = render();
+        return toFile(content, new File(outputFilePath));
+    }
+
+    private File toFile(String content, File target) throws IOException {
+        Files.createDirectories(target.getAbsoluteFile().getParentFile().toPath());
+
+        try (final Writer out = new OutputStreamWriter(new FileOutputStream(target), UTF_8)) {
+            out.write(content);
+        }
+
+        return target;
     }
 
     @Override

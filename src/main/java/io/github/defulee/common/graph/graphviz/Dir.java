@@ -1,4 +1,4 @@
-package io.github.defulee.graph.graphviz;
+package io.github.defulee.common.graph.graphviz;
 
 /**
  * @author defu

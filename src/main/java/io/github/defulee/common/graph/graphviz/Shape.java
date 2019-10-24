@@ -1,4 +1,4 @@
-package io.github.defulee.graph.graphviz;
+package io.github.defulee.common.graph.graphviz;
 
 /**
  * graphviz node shape
@@ -8,6 +8,26 @@ package io.github.defulee.graph.graphviz;
  * @see <a href="https://www.graphviz.org/doc/info/shapes.html">https://www.graphviz.org/doc/info/shapes.html</a>
  */
 public enum Shape {
+    CIRCLE,
+    POLYGON,
+    PARALLELOGRAM,
+    OCTAGON,
+    MDIAMOND,
+    MSQUARE,
+    SIGNATURE,
+    ASSEMBLY,
+    INSULATOR,
+    NOVERHANG,
+    THREE_POVERHANG,
+    FIVE_POVERHANG,
+    FOLDER,
+    NOTE,
+    TAB,
+    MCIRCLE,
+    INVHOUSE,
+    HOUSE,
+    HEXAGON,
+    DOUBLE_OCTAGON,
     ELLIPSE,
     BOX,
     RECTANGLE,

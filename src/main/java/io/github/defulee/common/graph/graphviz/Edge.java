@@ -1,4 +1,4 @@
-package io.github.defulee.graph.graphviz;
+package io.github.defulee.common.graph.graphviz;
 
 import com.google.common.base.Joiner;
 import lombok.AllArgsConstructor;
@@ -28,37 +28,12 @@ public class Edge {
     private Color color;
     private List<Style> styles;
 
-
-    public Edge() {
-        this.name = "edge";
-    }
-
     public Edge(Node src, Node dst) {
         this(src, dst, null);
     }
 
     public Edge(Node src, Node dst, String label) {
         this(src, dst, label, null, null, null);
-    }
-
-    public Edge(Node src, Node dst, String label, ArrowType arrowTail) {
-        this(src, dst, label, arrowTail, null, null);
-    }
-
-    public Edge(Node src, Node dst, String label, Color color) {
-        this(src, dst, label, null, color, null);
-    }
-
-    public Edge(Node src, Node dst, String label, ArrowType arrowTail, Style... styles) {
-        this(src, dst, label, arrowTail, null, styles);
-    }
-
-    public Edge(Node src, Node dst, String label, Color color, Style... styles) {
-        this(src, dst, label, null, color, styles);
-    }
-
-    public Edge(Node src, Node dst, String label, ArrowType arrowTail, Color color) {
-        this(src, dst, label, arrowTail, color, null);
     }
 
     public Edge(Node src, Node dst, String label, ArrowType arrowTail, Color color, Style... styles) {

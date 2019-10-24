@@ -1,12 +1,12 @@
-package io.github.defulee.graph.examples.graphviz;
+package io.github.defulee.common.graph.examples.graphviz;
 
-import io.github.defulee.graph.graphviz.ArrowType;
-import io.github.defulee.graph.graphviz.Color;
-import io.github.defulee.graph.graphviz.Edge;
-import io.github.defulee.graph.graphviz.Graphviz;
-import io.github.defulee.graph.graphviz.Node;
-import io.github.defulee.graph.graphviz.Shape;
-import io.github.defulee.graph.graphviz.Style;
+import io.github.defulee.common.graph.graphviz.Color;
+import io.github.defulee.common.graph.graphviz.Edge;
+import io.github.defulee.common.graph.graphviz.Node;
+import io.github.defulee.common.graph.graphviz.Shape;
+import io.github.defulee.common.graph.graphviz.Style;
+import io.github.defulee.common.graph.graphviz.ArrowType;
+import io.github.defulee.common.graph.graphviz.Graphviz;
 
 import java.util.Arrays;
 
@@ -17,10 +17,10 @@ import java.util.Arrays;
 public class SimpleGraphvizExample {
 
     public static void main(String[] args) {
-        Node nodeConfig = Node.builder().shape(Shape.RECTANGLE).styles(Arrays.asList(Style.filled, Style.rounded)).color(Color.LIGHTBLUE).build();
+        Node nodeConfig = Node.builder().shape(Shape.RECTANGLE).styles(Arrays.asList(Style.FILLED, Style.ROUNDED)).color(Color.LIGHTBLUE).build();
         Edge edgeConfig = Edge.builder().color(Color.GREEN).arrowTail(ArrowType.NORMAL).build();
 
-        Node startNode = Node.builder().name("START").shape(Shape.DOUBLE_CIRCLE).styles(Arrays.asList(Style.filled)).color(Color.LIGHTBLUE).build();
+        Node startNode = Node.builder().name("START").shape(Shape.DOUBLE_CIRCLE).styles(Arrays.asList(Style.FILLED)).color(Color.LIGHTBLUE).build();
         Node node1 = Node.builder().name("node1").label("node-1").build();
         Node node2 = Node.builder().name("node2").label("node-2").build();
         Node node3 = Node.builder().name("node3").label("node-3").shape(Shape.DIAMOND).build();

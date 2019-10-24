@@ -1,4 +1,4 @@
-package io.github.defulee.graph.graphviz;
+package io.github.defulee.common.graph.graphviz;
 
 /**
  * graphviz node style
@@ -8,21 +8,21 @@ package io.github.defulee.graph.graphviz;
  * @see <a href="https://www.graphviz.org/doc/info/shapes.html">https://www.graphviz.org/doc/info/shapes.html</a>
  */
 public enum Style {
-    filled,
-    invisible,
-    diagonals,
-    rounded,
-    dashed,
-    dotted,
-    solid,
-    bold;
+    FILLED,
+    INVISIBLE,
+    DIAGONALS,
+    ROUNDED,
+    DASHED,
+    DOTTED,
+    SOLID,
+    BOLD;
 
     @Override
     public String toString() {
-        return render();
+        return value();
     }
 
-    public String render() {
+    public String value() {
         return this.name().toLowerCase();
     }
 }

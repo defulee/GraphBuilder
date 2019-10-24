@@ -1,4 +1,4 @@
-package io.github.defulee.graph.graphviz;
+package io.github.defulee.common.graph.graphviz;
 
 import com.google.common.base.Joiner;
 import lombok.Builder;
@@ -25,36 +25,27 @@ public class Node {
     private Shape shape;
     private Color color;
     private Color fillColor;
+    private FixedSize fixedSize;
+    /**
+     * Width of node, in inches.
+     */
+    private Double width;
+    /**
+     * Height of node, in inches.
+     */
+    private Double height;
 
-    public Node() {
-        this("node");
-    }
 
     public Node(String name) {
         this(name, null);
     }
 
     public Node(String name, String label) {
-        this(name, label, Collections.emptyList(), null, null, null);
+        this(name, label, Collections.emptyList(), null, null, null, null, null, null);
     }
 
-    public Node(String name, String label, Shape shape) {
-        this(name, label, shape, null, null);
-    }
-
-    public Node(String name, String label, Color color) {
-        this(name, label, null, color, null);
-    }
-
-    public Node(String name, String label, Style... styles) {
-        this(name, label, null, null, styles);
-    }
-
-    public Node(String name, String label, Shape shape, Color color) {
-        this(name, label, shape, color, null);
-    }
-
-    public Node(String name, String label, List<Style> styles, Shape shape, Color color, Color fillColor) {
+    public Node(String name, String label, List<Style> styles, Shape shape, Color color, Color fillColor, FixedSize fixedSize, Double height,
+                Double width) {
         this.name = name;
         this.label = label;
         if (CollectionUtils.isNotEmpty(styles)) {
@@ -65,6 +56,10 @@ public class Node {
         this.shape = shape;
         this.color = color;
         this.fillColor = fillColor;
+        this.fixedSize = fixedSize;
+        this.height = height;
+        this.width = width;
+
     }
 
     public Node(String name, String label, Shape shape, Color color, Style... styles) {
@@ -91,6 +86,15 @@ public class Node {
         }
         if (shape != null) {
             builder.append(shape.render()).append(", ");
+        }
+        if (fixedSize != null) {
+            builder.append(fixedSize.render()).append(", ");
+        }
+        if (height != null) {
+            builder.append("height=").append(height).append(", ");
+        }
+        if (width != null) {
+            builder.append("width=").append(width).append(", ");
         }
         if (color != null) {
             builder.append(color.render(false)).append(", ");
