@@ -1,12 +1,12 @@
-package io.github.defulee.common.graph.examples.graphviz;
+package io.github.defulee.diagram.graph.examples.graphviz;
 
-import io.github.defulee.common.graph.graphviz.Color;
-import io.github.defulee.common.graph.graphviz.Edge;
-import io.github.defulee.common.graph.graphviz.Node;
-import io.github.defulee.common.graph.graphviz.Shape;
-import io.github.defulee.common.graph.graphviz.Style;
-import io.github.defulee.common.graph.graphviz.ArrowType;
-import io.github.defulee.common.graph.graphviz.Graphviz;
+import io.github.defulee.diagram.graph.graphviz.Color;
+import io.github.defulee.diagram.graph.graphviz.Edge;
+import io.github.defulee.diagram.graph.graphviz.Node;
+import io.github.defulee.diagram.graph.graphviz.Shape;
+import io.github.defulee.diagram.graph.graphviz.Style;
+import io.github.defulee.diagram.graph.graphviz.ArrowType;
+import io.github.defulee.diagram.graph.graphviz.Graphviz;
 
 import java.util.Arrays;
 

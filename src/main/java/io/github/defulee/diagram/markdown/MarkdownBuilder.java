@@ -1,4 +1,4 @@
-package io.github.defulee.common.markdown;
+package io.github.defulee.diagram.markdown;
 
 
 import com.google.common.base.Joiner;

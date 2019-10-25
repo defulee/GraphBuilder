@@ -1,4 +1,4 @@
-package io.github.defulee.common.graph.graphviz;
+package io.github.defulee.diagram.graph.graphviz;
 
 /**
  * graphviz node style
